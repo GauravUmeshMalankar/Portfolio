@@ -1,0 +1,137 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    /* Light mode (default) */
+    body.light {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    body.light nav {
+      background-color: #ffffff;
+      border-color: #e5e7eb;
+    }
+    body.light nav .text-black {
+      color: #000000;
+    }
+    /* Dark mode */
+    body.dark {
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+    body.dark nav {
+      background-color: #1f2937;
+      border-color: #374151;
+    }
+    body.dark nav .text-black {
+      color: #e5e7eb;
+    }
+    body.dark .hover\\:text-gray-300:hover {
+      color: #d1d5db;
+    }
+    body.dark .bg-\\[\\#1f2937\\] {
+      background-color: #374151;
+    }
+    body.dark .hover\\:bg-\\[\\#374151\\]:hover {
+      background-color: #4b5563;
+    }
+    /* Ensure main section text remains readable */
+    main {
+      transition: color 0.3s;
+    }
+  </style>
+
+ </head>
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+   <div class="font-bold text-lg">
+    Portfolio
+   </div>
+   <ul class="hidden sm:flex space-x-6 font-semibold text-sm">
+    <li>
+     <a class="hover:underline" href="#">
+      Bio
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="#">
+      Papers
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="#">
+      Talks
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="#">
+      News
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="#">
+      Experience
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="projects.html">
+      Projects
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="#">
+      Teaching
+     </a>
+    </li>
+   </ul>
+   <div class="flex space-x-6 text-black text-lg">
+    <button aria-label="Search" class="focus:outline-none">
+     <i class="fas fa-search">
+     </i>
+    </button>
+   <button id="theme-toggle" aria-label="Toggle theme" class="focus:outline-none">
+     <i id="theme-icon" class="fas fa-moon">
+     </i>
+    </button>
+   </div>
+  </nav>
+  <!-- Main content -->
+
+
+ <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.classList.remove('light', 'dark');
+    body.classList.add(savedTheme);
+    themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleButton.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark');
+      body.classList.remove('light', 'dark');
+      if (isDark) {
+        body.classList.add('light');
+        themeIcon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('dark');
+        themeIcon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>

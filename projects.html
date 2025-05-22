@@ -1,0 +1,253 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Projects
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    /* Light mode (default) */
+    body.light {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    body.light nav {
+      background-color: #ffffff;
+      border-color: #e5e7eb;
+    }
+    body.light nav .text-black {
+      color: #000000;
+    }
+    /* Dark mode */
+    body.dark {
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+    body.dark nav {
+      background-color: #1f2937;
+      border-color: #374151;
+    }
+    body.dark nav .text-black {
+      color: #e5e7eb;
+    }
+    body.dark .hover\\:text-gray-300:hover {
+      color: #d1d5db;
+    }
+    body.dark .bg-\\[\\#1f2937\\] {
+      background-color: #374151;
+    }
+    body.dark .hover\\:bg-\\[\\#374151\\]:hover {
+      background-color: #4b5563;
+    }
+    /* Ensure main section text remains readable */
+    main {
+      transition: color 0.3s;
+    }
+    nav a {
+       color: inherit; 
+    }
+    nav a:hover {
+      color: #22c55e; 
+    }
+    body.light main {
+      background-color: #ffffff; /* Light background */
+      color: #000000; /* Dark text */
+    }
+
+    body.light main h1,
+    body.light main h2
+    body.light main p {
+      color: #000000; /* Dark text for headings */
+    }
+
+    body.light main ul {
+      color: #4b5563; /* Darker text for lists */
+    }
+
+    /* Dark mode styles for main content */
+    body.dark main {
+      background-color: #1f2937; /* Dark background */
+      color: #e5e7eb; /* Light text */
+    }
+
+    body.dark main h1,
+    body.dark main h2
+    body.dark main p {
+      color: #e5e7eb; /* Light text for headings */
+    }
+
+    body.dark main ul {
+      color: #d1d5db; /* Lighter text for lists */
+    }
+
+
+  </style>
+
+ </head>
+ <body class="dark">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+   <div class="font-bold text-lg">
+    Portfolio
+   </div>
+   <ul class="hidden sm:flex space-x-6 font-semibold text-sm">
+    <li>
+     <a class="hover:underline" href="index.html">
+      Home
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="https://drive.google.com/file/d/1S6niXQSpo7Il2ZE42IJz96XAswc0qdRo/view?usp=sharing">
+      Biodata
+     </a>
+    </li>
+
+    <li>
+     <a class="hover:underline" href="Education.html">
+      Education
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="skills.html">
+      Skills
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="projects.html">
+      Projects
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="achieve.html">
+      Achievements
+     </a>
+    </li>
+   </ul>
+   <div class="flex space-x-6 text-black text-lg">
+
+
+   <button id="theme-toggle" aria-label="Toggle theme" class="focus:outline-none">
+     <i id="theme-icon" class="fas fa-moon">
+     </i>
+    </button>
+   </div>
+  </nav>
+  <!-- Main content -->
+
+ <!-- Main content adjusted -->
+    <main class="min-h-screen flex flex-col sm:flex-row px-6 sm:px-16 py-10 sm:py-20 text-white">
+        <div class="max-w-7xl mx-auto w-full">
+            <h1 class="text-center font-bold text-white text-4xl mb-3">
+                Selected Projects
+            </h1>
+            <p class="text-center text-xl text-white max-w-xl mx-auto mb-10">
+                I enjoy making things. Here are a selection of projects that I have made.
+            </p>
+   <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    <!-- Project 1 -->
+    <article>
+      <img 
+
+        src="images/Home.png"
+        class="h-40 w-auto rounded-md object-contain mx-auto mb-3" 
+      />
+            
+  
+     <p class="text-sm text-[#4ade80] font-bold uppercase mb-1">
+      WebApp
+     </p>
+     <h3 class="font-semibold text-white text-sm mb-1 flex items-center space-x-1">
+      <span>
+       Society Management System
+      </span>
+      <a aria-label="Pandas external link" class="text-white hover:text-[#4ade80]" href="https://github.com/GauravUmeshMalankar/HousingSocietyManagement">
+       <i class="fas fa-external-link-alt text-sm">
+       </i>
+      </a>
+     </h3>
+     <p class="text-xs text-gray-400 mb-2 leading-tight">
+      Society.com provides essential tools to manage members, committees, elections, maintenance, meetings, and more. Whether you’re a society administrator or a resident, our platform simplifies day-to-day tasks and fosters a well-organized living environment.
+    
+     </p>
+     <p class="text-sm text-gray-400 mb-2 leading-tight">
+      <a href="http://hsm.free.nf/index.php" > Demo: Society.com</a>
+     </p>
+     <time class="text-xs text-gray-500 block">
+      March 15, 2025
+     </time>
+    </article>
+    
+    <!-- Project 2 -->
+    <article>
+      <img 
+
+        src="images/image027.jpg"
+        class="h-40 w-auto rounded-md object-contain mx-auto mb-3" 
+      />
+            
+  
+     <p class="text-sm text-[#4ade80] font-bold uppercase mb-1">
+      WebApp
+     </p>
+     <h3 class="font-semibold text-white text-sm mb-1 flex items-center space-x-1">
+      <span>
+          Investement Management System
+      </span>
+      <a aria-label="Pandas external link" class="text-white hover:text-[#4ade80]" href="https://github.com/GauravUmeshMalankar/HousingSocietyManagement">
+       <i class="fas fa-external-link-alt text-sm">
+       </i>
+      </a>
+     </h3>
+     <p class="text-sm text-gray-400 mb-2 leading-tight">
+      Manages the investment for the clients 
+    
+     </p>
+   
+     <time class="text-xs text-gray-500 block">
+      October 15, 2024
+     </time>
+    </article>
+    
+    
+   
+
+
+   </section>
+  </main>
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.classList.remove('light', 'dark');
+    body.classList.add(savedTheme);
+    themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleButton.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark');
+      body.classList.remove('light', 'dark');
+      if (isDark) {
+        body.classList.add('light');
+        themeIcon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('dark');
+        themeIcon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+ </body>
+</html>
+

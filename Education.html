@@ -1,0 +1,222 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    /* Light mode (default) */
+    body.light {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    body.light nav {
+      background-color: #ffffff;
+      border-color: #e5e7eb;
+    }
+    body.light nav .text-black {
+      color: #000000;
+    }
+    /* Dark mode */
+    body.dark {
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+    body.dark nav {
+      background-color: #1f2937;
+      border-color: #374151;
+    }
+    body.dark nav .text-black {
+      color: #e5e7eb;
+    }
+    body.dark .hover\\:text-gray-300:hover {
+      color: #d1d5db;
+    }
+    body.dark .bg-\\[\\#1f2937\\] {
+      background-color: #374151;
+    }
+    body.dark .hover\\:bg-\\[\\#374151\\]:hover {
+      background-color: #4b5563;
+    }
+    /* Ensure main section text remains readable */
+    main {
+      transition: color 0.3s;
+    }
+    nav a {
+       color: inherit; 
+    }
+    nav a:hover {
+      color: #22c55e; 
+    }
+    body.light main {
+  background-color: #ffffff; /* Light background */
+  color: #000000; /* Dark text */
+}
+
+body.light main h1,
+body.light main h2 {
+  color: #000000; /* Dark text for headings */
+}
+
+body.light main ul {
+  color: #4b5563; /* Darker text for lists */
+}
+
+/* Dark mode styles for main content */
+body.dark main {
+  background-color: #1f2937; /* Dark background */
+  color: #e5e7eb; /* Light text */
+}
+
+body.dark main h1,
+body.dark main h2 {
+  color: #e5e7eb; /* Light text for headings */
+}
+
+body.dark main ul {
+  color: #d1d5db; /* Lighter text for lists */
+}
+
+  </style>
+
+ </head>
+ <body class="dark">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+   <div class="font-bold text-lg">
+    Portfolio
+   </div>
+   <ul class="hidden sm:flex space-x-6 font-semibold text-sm">
+    <li>
+     <a class="hover:underline" href="index.html">
+      Home
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="https://drive.google.com/file/d/1S6niXQSpo7Il2ZE42IJz96XAswc0qdRo/view?usp=sharing">
+      Biodata
+     </a>
+    </li>
+
+    <li>
+     <a class="hover:underline" href="Education.html">
+      Education
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="skills.html">
+      Skills
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="projects.html">
+      Projects
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="achieve.html">
+      Achievements
+     </a>
+    </li>
+   </ul>
+   <div class="flex space-x-6 text-black text-lg">
+
+
+   <button id="theme-toggle" aria-label="Toggle theme" class="focus:outline-none">
+     <i id="theme-icon" class="fas fa-moon">
+     </i>
+    </button>
+   </div>
+  </nav>
+  <!-- Main content -->
+   
+     <main class="min-h-screen flex flex-col sm:flex-row px-6 sm:px-16  text-white">
+
+  <main class="max-w-3xl mx-auto px-6 py-10">
+    <h1 class="text-white font-bold text-2xl mb-8">Education</h1>
+
+    <section class="relative pl-10 mb-12 ">
+        <div class="absolute left-0 top-1 text-teal-500">
+        <i class="fas fa-graduation-cap fa-lg"></i>
+      </div>
+      <h2 class="font-semibold text-white text-md mb-0.5">Bachelor of Science in Computer Science</h2>
+       <p class="text-gray-300 text-sm mb-0.5">University of Mumbai </p>
+      <p class="text-gray-300 text-sm mb-0.5">Shikshan Prasarak Mandal’s Kankavli College </p>
+      <p class="text-gray-400 text-xs mb-3">June 2023 – April 2025</p>
+      <p class="text-gray-300 text-sm mb-2">CGPA: 8</p>
+      <hr class="border-gray-600 mb-2">
+      <a href="path/to/your/certificate.pdf" class="text-teal-500 text-xs" download>View Certificate</a>
+      <div class="absolute left-1 top-8 h-full border-l border-gray-700"></div>
+   
+    </section>
+
+    <section class="relative pl-10 mb-12">
+      <div class="absolute left-0 top-1 text-teal-500">
+        <i class="fas fa-graduation-cap fa-lg"></i>
+      </div>
+      <h2 class="font-semibold text-white text-sm md-0.5">Higher Secondary Certificate (12th - Science)</h2>
+       <p class="text-gray-300 text-sm mb-0.5">Maharashtra State Board</p>
+      <p class="text-gray-300 text-sm mb-0.5">Shikshan Prasarak Mandal’s Kankavli College </p>
+      <p class="text-gray-400 text-xs mb-3">June 2021 – March 2022</p>
+      <p class="text-gray-300 text-sm mb-2">Percentage: 58.50%</p>
+      <hr class="border-gray-600 mb-2">
+      <a href="https://drive.google.com/file/d/1OP-d0pp2JYl6y4XnNwxk1F9Pirmh8PBe/view?usp=sharing" class="text-teal-500 text-xs" download>View Certificate</a>
+      <div class="absolute left-1 top-8 h-full border-l border-gray-700"></div>
+   
+    </section>
+
+
+     <section class="relative pl-10 mb-12">
+      <div class="absolute left-0 top-1 text-teal-500">
+        <i class="fas fa-graduation-cap fa-lg"></i>
+      </div>
+      <h2 class="font-semibold text-white text-md mb-0.5">Secondary School Certificate  (10th) </h2>
+       <p class="text-gray-300 text-sm mb-0.5">Maharashtra State Board</p>
+      <p class="text-gray-300 text-sm mb-0.5">Ideal English Medium School, Kankavli </p>
+      <p class="text-gray-400 text-xs mb-3">June 2019 – March 2020</p>
+      <p class="text-gray-300 text-sm mb-2">Percentage: 74.20%</p>
+      <hr class="border-gray-600 mb-2">
+      <a href="https://drive.google.com/file/d/1dMvBLtEbOFVc7_ofvFnP-Oteu7pFG1jk/view?usp=sharing" class="text-teal-500 text-xs" download>View Certificate</a>
+      <div class="absolute left-1 top-8 h-full border-l border-gray-700"></div>
+   
+    </section>
+
+
+  </main>
+<script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.classList.remove('light', 'dark');
+    body.classList.add(savedTheme);
+    themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleButton.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark');
+      body.classList.remove('light', 'dark');
+      if (isDark) {
+        body.classList.add('light');
+        themeIcon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('dark');
+        themeIcon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+ </body>
+</html>

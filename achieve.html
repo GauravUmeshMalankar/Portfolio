@@ -1,0 +1,199 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Skills
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    /* Light mode (default) */
+    body.light {
+      background-color: #ffffff;
+      color: #000000;
+    }
+    body.light nav {
+      background-color: #ffffff;
+      border-color: #e5e7eb;
+    }
+    body.light nav .text-black {
+      color: #000000;
+    }
+    /* Dark mode */
+    body.dark {
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+    body.dark nav {
+      background-color: #1f2937;
+      border-color: #374151;
+    }
+    body.dark nav .text-black {
+      color: #e5e7eb;
+    }
+    body.dark .hover\\:text-gray-300:hover {
+      color: #d1d5db;
+    }
+    body.dark .bg-\\[\\#1f2937\\] {
+      background-color: #374151;
+    }
+    body.dark .hover\\:bg-\\[\\#374151\\]:hover {
+      background-color: #4b5563;
+    }
+    /* Ensure main section text remains readable */
+    main {
+      transition: color 0.3s;
+    }
+   nav a {
+       color: inherit; 
+    }
+    nav a:hover {
+      color: #22c55e; 
+    }
+    body.light main {
+    background-color: #ffffff; /* Light background */
+    color: #000000; /* Dark text */
+    }
+
+    body.light main h1,
+    body.light main h2 {
+    color: #000000; /* Dark text for headings */
+    }
+
+    body.light main ul {
+    color: #4b5563; /* Darker text for lists */
+    }
+
+    /* Dark mode styles for main content */
+    body.dark main {
+    background-color: #1f2937; /* Dark background */
+    color: #e5e7eb; /* Light text */
+    }
+
+    body.dark main h1,
+    body.dark main h2 {
+    color: #e5e7eb; /* Light text for headings */
+    }
+
+    body.dark main ul {
+    color: #d1d5db; /* Lighter text for lists */
+    }
+
+  </style> 
+
+ </head>
+ <body class="dark">
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+   <div class="font-bold text-lg">
+    Portfolio
+   </div>
+   <ul class="hidden sm:flex space-x-6 font-semibold text-sm">
+    <li>
+     <a class="hover:underline" href="index.html">
+      Home
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="https://drive.google.com/file/d/1S6niXQSpo7Il2ZE42IJz96XAswc0qdRo/view?usp=sharing">
+      Biodata
+     </a>
+    </li>
+
+    <li>
+     <a class="hover:underline" href="Education.html">
+      Education
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="skills.html">
+      Skills
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="projects.html">
+      Projects
+     </a>
+    </li>
+    <li>
+     <a class="hover:underline" href="achieve.html">
+      Achievements
+     </a>
+    </li>
+   </ul>
+   <div class="flex space-x-6 text-black text-lg">
+
+
+   <button id="theme-toggle" aria-label="Toggle theme" class="focus:outline-none">
+     <i id="theme-icon" class="fas fa-moon">
+     </i>
+    </button>
+   </div>
+  </nav>
+  
+
+  <!-- Main content -->
+  <main class="min-h-screen flex flex-col sm:flex-row justify-center px-6 sm:px-16 py-10 text-white">
+
+  <div class="max-w-4xl">
+    <h1 class="text-3xl font-extrabold text-center mb-10">Achievements</h1>
+    <div class="flex flex-col sm:flex-row justify-center gap-20 sm:gap-40">
+      <div>
+         <h2 class="font-bold text-lg mb-6">DSP: <a href="https://drive.google.com/file/d/1CBIWQGdwwMby5suWeBCTrIgytzwYjB1L/view?usp=sharing" class="text-teal-500 text-sm" >View Certificate</a></h2>
+        <h2 class="font-bold text-lg mb-6">Code Battles: <a href="https://drive.google.com/file/d/1kessEQT0Vatm0IRWKRfmm1NcKMmKmrVh/view?usp=sharing" class="text-teal-500 text-sm" >View Certificate</a></h2>
+  
+
+        <h2 class="font-bold text-lg mb-6">Code Master:  <a href="https://drive.google.com/file/d/1AL6Azzb3LAvqMZXunrg_zJfBRYrZ6ETX/view?usp=sharing" class="text-teal-500 text-sm" >View Certificate</a></h2>
+
+        <h2 class="font-bold text-lg mb-6">Chess:  <a href="https://drive.google.com/file/d/1p_XDxnSwGzPNx_TNjM5usFAeZ0Gm37DS/view?usp=sharing" class="text-teal-500 text-sm" >View Certificate</a></h2>
+      
+      </div>
+      
+    </div>
+
+
+   
+     
+      
+    
+  </div>
+</main>
+
+
+ <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Check for saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    body.classList.remove('light', 'dark');
+    body.classList.add(savedTheme);
+    themeIcon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleButton.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark');
+      body.classList.remove('light', 'dark');
+      if (isDark) {
+        body.classList.add('light');
+        themeIcon.className = 'fas fa-moon';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.classList.add('dark');
+        themeIcon.className = 'fas fa-sun';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+</body>
+
+ 
+</html>
