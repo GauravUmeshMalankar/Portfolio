@@ -1,0 +1,27 @@
+
+
+
+   <!--
+  footer.html — REFERENCE COPY ONLY.
+
+  This file is not loaded directly by the browser (a plain static site can't
+  "include" one .html inside another without a server). Instead, footer.js
+  injects this exact markup into any page automatically.
+
+  To add the footer to a page, put this right before </body>:
+
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
+
+  That's it — footer.js builds the markup below and drops it in. Colors
+  follow whatever theme (body.light / body.dark) is already active on the
+  page, using the same toggle from theme.js. The copyright year is written
+  directly in the markup (2026) — update it by hand when the year changes.
+-->
+<footer class="site-footer px-6 py-4 mt-auto text-center">
+  <div class="max-w-3xl mx-auto flex flex-col items-center gap-2 text-xs">
+
+
+    <p class="mt-1 pt-2 border-t footer-divider w-full">&copy; 2026 Gaurav Umesh Malankar. All rights reserved.</p>
+  </div>
+</footer>
